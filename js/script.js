@@ -1,18 +1,31 @@
-const input = document.querySelector('input');
-const button = document.querySelector('button');
-const smserror = document.querySelectorAll('.labelsmserror');
+
+const email = document.getElementById("inputemail");
+const smserror = document.querySelector("#smserror");
+const reg = /^([a-zA-Z0-9]+([a-zA-Z0-9]*[_.-]?)*)@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+const form = document.querySelector(".formemail");
+form.addEventListener('submit', function verifica(eventoEnvio) {
 
 
-
-
-button.addEventListener('click', function verifica(){
-   
+    if( !email.value  ){
+        smserror.innerHTML ='campo email vacio';
+        smserror.style.display= "block";
+        eventoEnvio.preventDefault();
+    }
+    else{
+        if( !reg.test(email.value) ){
+            smserror.innerHTML ='Please provide a valid email';
+            smserror.style.display= "block";
+            eventoEnvio.preventDefault();
+        }
+    }
+    
+    
 });
 
+// header min-width 956  pintar en main
 
-
-
-input.addEventListener('invalid', function muestrasmserror() {
-    smserror.style.opacity = 0;
-    
-} );
+// button.addEventListener('click' , verifica);
+/**
+ *  Mensaje de error si la email no tiene formato correcto.
+ */
