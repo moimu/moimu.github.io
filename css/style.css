@@ -1,4 +1,6 @@
-
+/* ## Layout
+- Mobile: 375px
+- Desktop: 1440px */
 :root{
     /* ### Primary */
     --Desaturated-Red: hsl(0, 36%, 70%);
@@ -11,33 +13,35 @@
 }
 *{
     margin:0;
+    
 }
 .body{
     /* ## Typography and Font */
     /* font-family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans); - Weights: 300, 400, 600*/
-    
     font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
     line-height: 1.5;
     min-height: 100vh;
-    
     color: var(--Desaturated-Red);
-    align-items: center;
     display:flex;
     flex-direction: row;
-    /* justify-content: center; */
-
+}
+.header_movil{
+    display:none;
 }
 
 .main{
     height: 100vh;
     width: 60vw;
     background-image: url("../images/bg-pattern-desktop.svg");
-    padding: 34px 80px;
+    padding: 34px 150px;
     box-sizing: border-box;
 }
 .mainsection{
-    padding: 5px 95px;
+    padding: 20px 0px;
+    max-width: 550px; 
+    display: flex;
+    flex-direction: column;
 }
 .mainsection h1{
     font-size: 6rem;
@@ -53,25 +57,33 @@
     font-weight: 600;
     color:black;
 }
+.formemail{
+    padding: 4em 2em;
+}
 .label{
     display:flex;
     width: 100%;
     border-style: none;
 }
+.labelimgerror{
+    display:none;
+    width: 30px;
+    height: 30px;
+    margin-left: -40%;
+    margin-top: 15px;
+}
 .inputemail{
     border-radius: 25px;
-    text-align: center;
+    padding-left: 25px;
+    /* text-align: center; */
     width: 100%;
     height: 60px;
     border: 1px solid var(--Desaturated-Red);
 }
-/* .inputemail:invalid{
-    border-color: var(--Soft-Red);
-} */
 .button{
     border-radius: 2em;
-    width: 100px;
-    height: 70px;
+    width: 80px;
+    height: 64px;
     background-color: #ee8c8c;
     border-style: none;
     margin-left: -55px;
@@ -83,7 +95,6 @@
     color:var(--Soft-Red);
     display: none;
 }
-
 .asidelogomodelo{
     height: 100vh;
     width: 40vw;
@@ -94,27 +105,89 @@
     width: 100%;
 }
 
-/* # Front-end */
-
-/* ## Layout
-- Mobile: 375px
-- Desktop: 1440px */
-
-@media (max-width:950px){
+@media (max-width:990px) {
 
     .body{
         flex-direction: column;
 
     }
-    .header{
+    .header_desktop{
+        display:none;
+    }
+    .header_movil{
+        
+        display:block;
         order:1;
+        padding:20px;
     }
     .asidelogomodelo{
         order:2;
+        width: 100%;
+        height: 700px;
+    }
+    .logomodelo{
+        height: 700px;
+        width: 100%;
     }
     .main{
         order:3;
+        width: 100%;
+        font-size: 14px;
+        height: auto;
+        padding: 34px 124px;
+        /* padding: 0px; */
     }
-
+    .mainsection{
+        padding: 3px 0px;
+        width: 90%;
+    }
+    .labelimgerror {
+        margin-left: -42%;    }
+    .button{
+        width: 70px;
+    }
 }
 
+@media (max-width: 620px) {
+    .body{
+        flex-direction: column;
+
+    }
+    .header_desktop{
+        display:none;
+    }
+    .header_movil{
+        
+        display:block;
+        order:1;
+        padding:20px;
+    }
+    .asidelogomodelo{
+        order:2;
+        width: 100%;
+        height: 395px;
+    }
+    .logomodelo{
+        height: 395px;
+        width: 100%;
+    }
+    .main{
+        order:3;
+        width: 100%;
+        font-size: 14px;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .mainsection h1 {
+        font-size: 3.5rem;
+    }
+    .mainsection p {
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+    .button{
+        width: 60px;
+    }
+    
+} 
