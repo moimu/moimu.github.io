@@ -21,9 +21,10 @@
 	--medium-spring-green: #0aff99ff;
 	--electric-blue: #0aefffff;
 	--azure: #147df5ff;
+	--azure-white: #5199eb;
+	--azure-white2: #afcef1;
 	--han-purple: #580affff;
 	--electric-purple: #be0affff;
-
 	/* fuentes */
 	/* font-family: 'Kreon', serif; */
 	/* font-family: 'Oxygen', sans-serif; */
@@ -133,7 +134,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: var(--azure-white2);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -233,10 +234,10 @@ input, select, textarea {
 		}
 
 			h1.major:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #147df5ff, #EBFCFB);
+				background-image: -webkit-linear-gradient(to right, #147df5ff, #EBFCFB);
+				background-image: -ms-linear-gradient(to right, #147df5ff, #EBFCFB);
+				background-image: linear-gradient(to right, #147df5ff, #EBFCFB);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -2605,7 +2606,7 @@ input, select, textarea {
 	}
 
 		.image img {
-			border-radius: 0.25em;
+			border-radius: 1em;
 			display: block;
 		}
 
@@ -3272,11 +3273,11 @@ input, select, textarea {
 			}
 
 		.wrapper.alt {
-			background-color: #261c3e;
+			background-color: var(--azure-white);
 		}
 
 		.wrapper.style1 {
-			background-color: #ffffff;
+			background-color: #F2F2F2;;
 		}
 
 		.wrapper.style1-alt {
@@ -3407,7 +3408,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color: var(--azure-white);
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3561,7 +3562,7 @@ input, select, textarea {
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: var(--azure);
+		background: var(--azure-white);
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3798,14 +3799,14 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:before {
-				background: #3c2c62;
+				background: #000000;
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #147df5ff, #EBFCFB);
+				background-image: -webkit-linear-gradient(to right, #147df5ff, #EBFCFB);
+				background-image: -ms-linear-gradient(to right, #147df5ff, #EBFCFB);
+				background-image: linear-gradient(to right, #147df5ff, #EBFCFB);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
